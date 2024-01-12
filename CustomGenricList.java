@@ -52,13 +52,14 @@ public class CustomGenricList < T > {
       return (T)(data[index]);//data has Object type so need type casting
   }
 
-public String toString(){
+public String toString(){//overriding the toString method # i learned that whenever we called  System.out.println it automatically calls out the toString method
+    //in overriding return type is also important;
     System.out.println(Arrays.toString(data));
     System.out.print("[ ");
     for(int i=0;i<size-1;i++){
         System.out.print(data[i]+", ");
     }
-    System.out.print(data[size-1]);
+    System.out.print(data[size-1]);//just to adjust the , in output
     System.out.println("] ");
     return ("size: "+size);
 }
